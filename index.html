@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title> Staircase Experiment </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<link rel="stylesheet" type="text/css" href="css/styles.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="script/Tone.js"></script>
+</head>
+<body>
+  <h2>Hi <span id='name'></span></h2>
+  <h3> 建议使用Google Chrome浏览器访问本页面.  </h3>
+	<h3> 请使用电脑和耳机完成测试 </h3>
+	<p>欢迎参加音高识别测试！</p>
+  <!-- <p>Welcome to Pitch discrimination task! </p> -->
+  <p>在每一组实验中，你将会听到两对、共四个音。</p>
+  <p>你的任务，是根据每一对中的两个音之间的距离，选出两对中距离更大的一对。</p>
+	<p>如果第一对的距离更大，请按左边的Pair 1按钮。如果第二对的距离更大，请按右边的Pair 2按钮。</p>
+  <!-- <p>When you press either button, it will go immediately to the next trial. When you are ready, press the 'play' button to start.</p> -->
+	  <p>当你做出选择，下一组实验将自动开始。</p>
+		<p>准备好，请按Play按钮。实验最多不会超过10分钟，还请耐心，谢谢。</p>
+		<p>实验结束之前请勿刷新本页面。实验结束之后，请记录阈值数据，并下载csv文件。谢谢。</p>
+  <!-- <p> Choose Complex tones if you want to test yourself with Complex tones </p> -->
+  <div id="sequencer">
+    <section   class="controls-main">
+      <h1>Task Start</h1>
+      <div class="pads"><button class="button" onclick="runTrials()">Play</button></div>
+      <!-- <label for="complex">Complex Tones ?</label> -->
+		<!-- <input type="checkbox" id="complex" /> -->
+    </section>
+    <section class="controls-sub" style="display: none">
+    	<h3 id="status"></h3>
+    </section>
+
+
+	<section class="pads">
+	<button class="button1" id="button1"> Pair 1 </button>
+	<button class="button2" id="button2"> Pair 2 </button>
+	</section>
+  </div>
+  <br><br>
+  <div>
+  	<table border=1>
+  		<thead>
+  		<tr>
+	      <th>Block</th>
+	      <th>Subject</th>
+	      <!-- <th>Complex</th> -->
+	      <th>阈值(Hz)</th>
+	      <th>Trials</th>
+	      <th>下载</th>
+    	</tr>
+    	</thead>
+    	<tbody id="results">
+    	</tbody>
+  	</table>
+	<script src="script/stair_1.js"></script>
+</body>
+</html>
